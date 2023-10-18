@@ -1,4 +1,6 @@
 import random
+import toronto
+import montreal
 userName = input("Please enter your name: ")
 print("Hi",userName,",welcome to House Value Calculator:")
 
@@ -28,7 +30,6 @@ if selection == 1:
     else:
         print("Number of rooms:",getRooms)
     def estimatedPriceToronto():
-        import toronto
         a = toronto.results
         b = getRooms
         return a * b
@@ -51,9 +52,11 @@ else:
         print("Number of rooms:",getRooms)
     else:
         print("Number of rooms:",getRooms) 
-    def montrealPrice():
-        x = random.randint(250, 550)
-        result = x * 900
-        rooms = result * getRooms
-        return rooms 
-    print("Estimated price of house:", montrealPrice())
+    def estimatedMontrealPrice():
+        a = montreal.results
+        b = getRooms
+        return a * b
+    print("Hi",userName)
+    print("House value calculator.")
+    print("House information: Toronto,","Area,",getArea,",","Number of rooms:",getRooms )
+    print("Estimated price of house:", estimatedMontrealPrice())
